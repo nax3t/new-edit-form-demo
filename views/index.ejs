@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <p><a href="/posts/new">Create New Post</a></p>
+    <div>
+    	<% posts.forEach(function(post) { %>
+				<h3><%= post.title %></h3>
+				<p><%= post.description %></p>
+				<a href="/posts/<%= post.id %>/edit">Edit Post</a>
+				<hr>
+    	<% }) %>
+    </div>
+  </body>
+</html>
